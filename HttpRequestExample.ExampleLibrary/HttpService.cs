@@ -85,7 +85,7 @@ namespace HttpRequestExample.ExampleLibrary
             catch (Exception ex)
             {
                 //response = new Result<TResponse>(400, ex.Message);
-                response = new Result(417, ex.Message);
+                response = new UnkonownResult(ex.Message);
             }
 
             return response;

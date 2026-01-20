@@ -37,4 +37,12 @@
         public Result(int _code, string _message, object _data) : base(_code, _message, _data) { }
         public Result(int _code, string _message, object _data, DateTime _time) : base(_code, _message, _data, _time) { }
     }
+      
+        
+    public class UnkonownResult : Result<object>
+    {
+        public UnkonownResult(string _message) : base(417, _message) { }
+        public UnkonownResult(string _message, object _data) : base(417, _message, _data) { }
+    }
+
 }
